@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5M3QXWQ');</script>
+<!-- End Google Tag Manager -->
+<link rel="icon" href="https://adfinitas.b-cdn.net/AVE/EOY26/img/favicon.png">
+<title>Avent 2026 · Action Vivre Ensemble</title>
+<meta name="description" content="Refusons la pauvreté, agissons ensemble ! Cet Avent, soutenez Cœur SDF, L'Oasis et Le 26 avec Action Vivre Ensemble.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Barlow+Condensed:wght@600;700&display=swap">
+<style>
+/* Layout: page de don en bandes pleine largeur, photo héro, 3 récits associatifs alternés, grille de dons, bandeau final.
+   Single light theme assumé (charte AVE). */
+:root{
+  --green:#06AA80;      /* vert AVE, titres et bandeaux */
+  --green-deep:#048462;
+  --blue:#007AC9;       /* bleu AVE, encadrés */
+  --orange:#ED5E26;     /* CTA */
+  --orange-deep:#D24C17;
+  --lime:#8CC43F;       /* vert logo */
+  --ink:#3F4442;        /* texte courant, gris légèrement vert */
+  --muted:#6B726F;
+  --mint:#E7F4EF;       /* fond doux */
+  --paper:#FFFFFF;
+  --rose:#FBE7DE;       /* bloc fiscal, repris des emails */
+  --f-text:"Barlow", "DIN Pro", Arial, sans-serif;
+  --f-cond:"Barlow Condensed", "DIN Condensed", "Arial Narrow", sans-serif;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--f-text);font-size:18px;line-height:1.6;margin:0}
+a{color:inherit}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{text-wrap:balance;line-height:1.15;margin:0}
+p{margin:0}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;background:var(--orange);color:#fff;text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:.95rem;padding:.85em 1.6em;border-radius:999px;transition:background .15s, transform .15s}
+.btn:hover{background:var(--orange-deep);transform:translateY(-1px)}
+.btn:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.btn--blue{background:var(--blue)} .btn--blue:hover{background:#0064a6}
+.btn--white{background:#fff;color:var(--orange)} .btn--white:hover{background:#fff3ee}
+
+/* Header */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid #eef1ef}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:12px;gap:16px}
+.top img{width:170px;height:auto}
+.top .btn{font-size:.82rem;padding:.7em 1.3em}
+
+/* Hero */
+.hero{position:relative;background:#222}
+.hero img{width:100%;height:min(78vh,640px);min-height:420px;object-fit:cover;object-position:50% 35%}
+.hero__box{position:absolute;left:0;right:0;bottom:36px}
+.hero__box .wrap{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.tag{display:inline-block;background:var(--lime);color:#fff;font-family:var(--f-cond);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.95rem;padding:.25em .7em}
+.hero h1{display:inline;background:var(--green);color:#fff;font-weight:800;font-size:clamp(1.9rem,4.6vw,3.2rem);line-height:1.25;padding:.08em .35em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hero__sub{background:var(--blue);color:#fff;font-weight:600;font-size:clamp(1rem,2vw,1.2rem);padding:.4em .7em;max-width:34em}
+.credit{position:absolute;right:10px;top:10px;color:#fff;font-size:.7rem;opacity:.8}
+
+/* Intro */
+.intro{padding-block:64px 56px}
+.intro__grid{display:grid;grid-template-columns:1.25fr .9fr;gap:48px;align-items:start}
+.intro h2{color:var(--blue);font-size:clamp(1.5rem,3vw,2rem);margin-bottom:18px}
+.intro p+p{margin-top:14px}
+.intro strong{color:var(--ink)}
+.quote{border-left:6px solid var(--green);padding:6px 0 6px 22px}
+.quote p{font-style:italic;font-weight:500;font-size:1.2rem;line-height:1.5;color:var(--green-deep)}
+.quote cite{display:block;margin-top:10px;font-style:normal;font-size:.9rem;color:var(--muted)}
+.quote__portrait{margin:0 0 18px;width:min(220px,60%)}
+.quote__portrait img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%}
+.quote__portrait figcaption{margin-top:6px;font-size:.68rem;line-height:1.35;color:var(--muted)}
+.intro .btn{margin-top:26px}
+
+/* Chiffre clé */
+.stat{background:var(--mint)}
+.stat .wrap{padding-block:40px;display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+.stat__title{flex-basis:100%;color:var(--blue);font-size:clamp(1.5rem,3vw,2rem);font-weight:800;margin-bottom:-8px}
+.stat__num{font-family:var(--f-cond);font-weight:700;font-size:clamp(3rem,7vw,4.6rem);line-height:1;color:var(--green)}
+.stat p{flex:1;min-width:240px;font-size:1.15rem;font-weight:500}
+.stat small{display:block;margin-top:6px;color:var(--muted);font-size:.8rem;font-weight:400}
+
+/* Associations */
+.assos{padding-block:72px 24px}
+.section-title{text-align:center;color:var(--ink);font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:800;max-width:34ch;margin:0 auto 12px}
+.section-lead{text-align:center;color:var(--muted);max-width:52ch;margin:0 auto 56px}
+.asso{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-bottom:72px}
+.asso:nth-of-type(even) .asso__media{order:2}
+.asso__media{position:relative}
+.asso__media img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.asso__media.illu img{object-fit:contain;background:#fbf8f3}
+.asso__place{position:absolute;left:0;bottom:0;background:var(--blue);color:#fff;font-family:var(--f-cond);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.9rem;padding:.35em .8em}
+.asso__body{min-width:0}
+.asso__kicker{font-family:var(--f-cond);font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--lime);font-size:1rem}
+.asso h3{color:var(--green);font-size:clamp(1.5rem,2.6vw,1.95rem);font-weight:800;margin:4px 0 14px}
+.asso p{font-size:1.02rem}
+.asso p+p{margin-top:12px}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 0;padding:0;list-style:none}
+.facts li{border:1.5px solid var(--green);color:var(--green-deep);font-weight:600;font-size:.88rem;padding:.3em .75em;border-radius:999px}
+.voice{margin-top:18px;background:var(--mint);padding:14px 18px;font-style:italic;color:var(--ink)}
+.voice b{display:block;font-style:normal;font-size:.85rem;color:var(--green-deep);margin-top:6px}
+.need{margin-top:16px;font-weight:600}
+.need span{color:var(--orange)}
+
+/* Dons */
+.give{background:var(--mint);padding-block:72px}
+.give__banner{display:block;width:max-content;max-width:100%;margin:0 auto 40px;background:var(--blue);color:#fff;font-weight:800;font-size:clamp(1.3rem,2.6vw,1.75rem);text-align:center;padding:.5em 1.1em;border-radius:14px}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.tier{background:#fff;border:1.5px solid #cfe8df;display:flex;flex-direction:column;min-width:0}
+.tier img{aspect-ratio:3/2;object-fit:cover;width:100%}
+.tier__amt{background:var(--green);color:#fff;font-weight:800;font-size:1.35rem;text-align:center;padding:.35em .5em}
+.tier__amt small{display:block;font-weight:500;font-size:.78rem;opacity:.95}
+.tier p{padding:16px 16px 0;font-size:.98rem;text-align:center;flex:1}
+.tier .btn{margin:16px auto 20px;font-size:.82rem}
+.tier--featured{border-color:var(--orange);box-shadow:0 10px 30px -14px rgba(237,94,38,.55)}
+.tier--featured .tier__amt{background:var(--orange)}
+.free{text-align:center;margin-top:28px;color:var(--muted)}
+.free a{color:var(--blue);font-weight:700}
+
+/* Fiscal */
+.tax{padding-block:56px}
+.tax__box{background:var(--rose);display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;padding:32px 36px}
+.tax__calc{font-family:var(--f-cond);text-align:center;line-height:1}
+.tax__calc .a{font-size:2.6rem;font-weight:700;color:var(--blue)}
+.tax__calc .arrow{display:block;font-size:1rem;color:var(--muted);margin:6px 0}
+.tax__calc .b{font-size:2.6rem;font-weight:700;color:var(--orange)}
+.tax__calc small{display:block;font-family:var(--f-text);font-size:.8rem;color:var(--muted);margin-top:4px}
+.tax h2{color:var(--orange);font-size:1.5rem;font-weight:800;text-transform:uppercase;margin-bottom:8px}
+.tax p{font-size:1rem}
+
+/* Bandeau final */
+.final{background:var(--green);color:#fff;text-align:center}
+.final .wrap{padding-block:64px;display:flex;flex-direction:column;align-items:center;gap:22px}
+.final h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:800;max-width:24ch}
+.final p{max-width:46ch;font-size:1.1rem;opacity:.95}
+
+/* Footer */
+.foot{background:#EAF4F0}
+.foot .wrap{padding-block:40px;display:grid;grid-template-columns:1.4fr 1fr;gap:32px;align-items:center}
+.foot p{font-size:.92rem;color:var(--ink)}
+.foot img{width:160px;margin-top:16px}
+.foot__share{font-weight:800;text-transform:uppercase;color:var(--blue);font-size:.9rem;border-left:6px solid var(--green);padding-left:14px}
+.foot__share a{display:inline-block;margin-top:8px;margin-right:12px;color:var(--green-deep);text-transform:none;font-weight:600}
+.legal{background:var(--green-deep);color:#fff;font-size:.78rem;text-align:center}
+.legal .wrap{padding-block:12px}
+
+/* Barre CTA mobile */
+.sticky-cta{display:none}
+
+@media (max-width:860px){
+  .intro__grid,.asso,.foot .wrap{grid-template-columns:1fr;gap:26px}
+  .asso:nth-of-type(even) .asso__media{order:0}
+  .tiers{grid-template-columns:repeat(2,1fr)}
+  .tax__box{grid-template-columns:1fr;text-align:center;padding:28px 20px}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  .top img{width:130px}
+  .hero img{height:520px;min-height:0}
+  .tiers{grid-template-columns:1fr}
+  .sticky-cta{display:block;position:fixed;left:0;right:0;bottom:0;z-index:20;background:#fff;border-top:1px solid #e6ebe9;padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+  .sticky-cta .btn{width:100%}
+  .legal{padding-bottom:70px}
+}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5M3QXWQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="top">
+  <div class="wrap">
+    <img src="https://adfinitas.b-cdn.net/AVE/EOY26/img/logo-ave.png" alt="Action Vivre Ensemble" width="400" height="89">
+    <a class="btn don" href="https://jedonne.vivre-ensemble.be/fr-FR/p/avent-2026">Je fais un don</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-label="Campagne d'Avent 2026">
+    <img src="https://adfinitas.b-cdn.net/AVE/EOY26/img/oasis-maman.jpg" alt="Une maman serre son petit garçon dans ses bras dans la cour de la maison d'accueil L'Oasis" width="1400" height="933">
+    <span class="credit">ASBL L'Oasis · © F. Pauwels / Collectif HUMA</span>
+    <div class="hero__box">
+      <div class="wrap">
+        <span class="tag">Avent 2026</span>
+        <h1>Refusons la pauvreté, agissons ensemble&nbsp;!</h1>
+        <p class="hero__sub">Votre don est porteur d'espoir pour les personnes précarisées en lutte pour une vie digne.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro">
+    <div class="wrap intro__grid">
+      <div>
+        <h2>Une famille frappe encore à notre porte</h2>
+        <p>Dans notre monde bouleversé par tant de crises, une famille frappe encore à notre porte&nbsp;: un enfant, ses parents, sans toit pour l'abriter. <strong>Comme autrefois à Bethléem, ils cherchent une place, un accueil, un peu d'humanité.</strong></p>
+        <p>Cette année, Action Vivre Ensemble soutient <strong>83 associations en Wallonie et à Bruxelles</strong> qui accueillent, nourrissent et accompagnent des familles sans logement, en précarité alimentaire ou victimes de violences.</p>
+        <a class="btn don" href="https://jedonne.vivre-ensemble.be/fr-FR/p/avent-2026">Je fais un don</a>
+      </div>
+      <blockquote class="quote">
+        <figure class="quote__portrait">
+          <img src="https://adfinitas.b-cdn.net/AVE/EOY26/img/pape-leon-xiv.jpg" alt="Portrait du pape Léon XIV, souriant, en soutane blanche" width="600" height="800" loading="lazy">
+          <figcaption>Photo : Edgar Beltrán / The Pillar, CC BY-SA 4.0, via Wikimedia Commons</figcaption>
+        </figure>
+        <p>«&nbsp;La dignité de toute personne humaine doit être respectée maintenant, pas demain. La situation de misère doit être un rappel constant à notre conscience.&nbsp;»</p>
+        <cite>Pape Léon XIV, <em>Dilexi te</em>, n° 92</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="stat" aria-label="Chiffre clé">
+    <div class="wrap">
+      <h2 class="stat__title">Une réalité alarmante</h2>
+      <div class="stat__num">1 sur 5</div>
+      <p>En Wallonie, plus d'une personne sur cinq vit dans la pauvreté ou l'exclusion sociale. À Bruxelles, c'est plus d'une sur trois.
+        <small>Source&nbsp;: Statbel / IWEPS, enquête SILC 2025 (revenus 2024).</small></p>
+    </div>
+  </section>
+
+  <section class="assos" id="associations">
+    <div class="wrap">
+      <h2 class="section-title">Pour cette fin d'année, vous avez l'opportunité de soutenir 3&nbsp;associations qui agissent chaque jour près de chez vous</h2>
+      <p class="section-lead">À Liège, à Bas-Warneton et à Charleroi, votre don devient un repas chaud, un toit sûr, un chemin pour se relever.</p>
+
+      <article class="asso">
+        <div class="asso__media">
+          <img src="https://adfinitas.b-cdn.net/AVE/EOY26/img/coeur-service.jpg" alt="Des volontaires de Cœur SDF servent la soupe aux invités du samedi" loading="lazy" width="1400" height="934">
+          <span class="asso__place">Liège</span>
+        </div>
+        <div class="asso__body">
+          <span class="asso__kicker">ASBL Cœur SDF</span>
+          <h3>Nourrir, écouter, redonner dignité</h3>
+          <p>Au sein de l'église Saint-Georges, 35 volontaires, souvent eux-mêmes touchés par la précarité, préparent chaque samedi midi un repas chaud complet pour les personnes qui vivent en rue. Vêtements, produits d'hygiène et sacs de couchage y sont offerts gratuitement.</p>
+          <p class="need">Cette année&nbsp;: <span>15 abonnements à des paniers de légumes bio et locaux</span> du Jardin Vivifiant, pour une alimentation saine et durable.</p>
+          <ul class="facts"><li>80 repas chaque samedi</li><li>Près de 95 personnes par semaine</li><li>Depuis 2010</li></ul>
+          <p class="voice">«&nbsp;Il y a là une vraie joie à se retrouver. Une sorte de confiance et d'apaisement s'installe.&nbsp;»<b>Charly Vetro, volontaire</b></p>
+        </div>
+      </article>
+
+      <article class="asso">
+        <div class="asso__media">
+          <img src="https://adfinitas.b-cdn.net/AVE/EOY26/img/oasis-epaule.jpg" alt="Une accompagnatrice pose le bras sur l'épaule d'une jeune femme accueillie à L'Oasis" loading="lazy" width="1400" height="933">
+          <span class="asso__place">Bas-Warneton</span>
+        </div>
+        <div class="asso__body">
+          <span class="asso__kicker">ASBL L'Oasis</span>
+          <h3>Offrir un refuge aux mamans et à leurs enfants</h3>
+          <p>La maison d'accueil L'Oasis offre un havre de paix à des femmes de 18 à 70 ans et à leurs enfants, qui ont vécu des violences familiales et la précarité extrême. Studio meublé, écoute, guidance budgétaire, aide au relogement&nbsp;: chacune y retrouve confiance, pas à pas.</p>
+          <p class="need">Cette année&nbsp;: <span>une nouvelle cuisine collective, une salle d'activités</span> pour les mamans et les enfants, et des espaces extérieurs rafraîchis.</p>
+          <ul class="facts"><li>8 femmes</li><li>25 enfants</li><li>Suivi après l'hébergement</li></ul>
+          <p class="voice">«&nbsp;J'avais peur de vivre ici, maintenant je me sens bien et forte.&nbsp;»<b>Patricia, maman hébergée à L'Oasis</b></p>
+        </div>
+      </article>
+
+      <article class="asso">
+        <div class="asso__media illu">
+          <img src="https://adfinitas.b-cdn.net/AVE/EOY26/img/le26-illu-sac.jpg" alt="Illustration d'un grand sac de voyage à carreaux et d'un ours en peluche" loading="lazy" width="1400" height="1119">
+          <span class="asso__place">Charleroi</span>
+        </div>
+        <div class="asso__body">
+          <span class="asso__kicker">ASBL Le 26</span>
+          <h3>Aider les mamans à se reconstruire</h3>
+          <p>Accessible 24h/24, Le 26 accueille des femmes en difficulté, avec ou sans enfants&nbsp;: 65 personnes au total. Violences conjugales, expulsion, logement insalubre&nbsp;: chacune arrive avec son histoire et construit, avec l'équipe, un projet pour retrouver son autonomie.</p>
+          <p class="need">Cette année&nbsp;: <span>des ateliers de danse méditative mères-enfants</span>, pour restaurer le lien et l'estime de soi après un vécu traumatique.</p>
+          <ul class="facts"><li>Accueil 24h/24</li><li>65 personnes hébergées</li><li>Jusqu'à 18 mois</li></ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="give" id="don">
+    <div class="wrap">
+      <h2 class="give__banner">À quoi servira votre don&nbsp;?</h2>
+      <div class="tiers">
+        <div class="tier">
+          <img src="https://adfinitas.b-cdn.net/AVE/EOY26/img/coeur-colis.jpg" alt="Des bénévoles préparent des colis alimentaires" loading="lazy" width="1400" height="934">
+          <div class="tier__amt">45 €<small>soit 31,50 € après réduction d'impôt</small></div>
+          <p>Vous financez un <strong>colis alimentaire</strong> pour une famille en difficulté.</p>
+          <a class="btn don" href="https://jedonne.vivre-ensemble.be/fr-FR/p/avent-2026">Je donne 45 €</a>
+        </div>
+        <div class="tier">
+          <img src="https://adfinitas.b-cdn.net/AVE/EOY26/img/coeur-table.jpg" alt="Des invités partagent un repas chaud à Cœur SDF" loading="lazy" width="1400" height="934">
+          <div class="tier__amt">65 €<small>soit 45,50 € après réduction d'impôt</small></div>
+          <p>Vous offrez un <strong>accueil complet</strong> (repas, douche, lavoir, accompagnement social) à 3 personnes sans abri.</p>
+          <a class="btn don" href="https://jedonne.vivre-ensemble.be/fr-FR/p/avent-2026">Je donne 65 €</a>
+        </div>
+        <div class="tier tier--featured">
+          <img src="https://adfinitas.b-cdn.net/AVE/EOY26/img/oasis-marelle.jpg" alt="Un enfant joue à la marelle dans la cour de L'Oasis" loading="lazy" width="1400" height="933">
+          <div class="tier__amt">80 €<small>soit 56 € après réduction d'impôt</small></div>
+          <p>Vous participez à <strong>l'accompagnement de femmes et d'enfants</strong> en difficulté.</p>
+          <a class="btn don" href="https://jedonne.vivre-ensemble.be/fr-FR/p/avent-2026">Je donne 80 €</a>
+        </div>
+        <div class="tier">
+          <img src="https://adfinitas.b-cdn.net/AVE/EOY26/img/coeur-noel.jpg" alt="Une grande tablée de Noël dressée dans l'église Saint-Georges à Liège" loading="lazy" width="1400" height="1050">
+          <div class="tier__amt">140 €<small>soit 98 € après réduction d'impôt</small></div>
+          <p>Vous offrez un <strong>repas festif de Noël</strong> à 10 personnes vivant en rue.</p>
+          <a class="btn don" href="https://jedonne.vivre-ensemble.be/fr-FR/p/avent-2026">Je donne 140 €</a>
+        </div>
+      </div>
+      <p class="free">Chaque don compte, quel que soit son montant. <a class="don" href="https://jedonne.vivre-ensemble.be/fr-FR/p/avent-2026">Je choisis mon montant</a></p>
+    </div>
+  </section>
+
+  <section class="tax">
+    <div class="wrap">
+      <div class="tax__box">
+        <div class="tax__calc" aria-label="Un don de 100 euros vous coûte 70 euros">
+          <span class="a">100 €</span><span class="arrow">après réduction d'impôt</span><span class="b">70 €</span>
+          <small>coût réel pour vous</small>
+        </div>
+        <div>
+          <h2>Réduisez vos impôts avant le 31 décembre</h2>
+          <p>Les dons atteignant au minimum 40 € sur une base annuelle vous donnent droit à une attestation fiscale et à une <strong>réduction d'impôt de 30&nbsp;%</strong>. Pour déduire votre don de vos revenus 2026, faites-le avant le 31/12 à minuit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <h2>Ensemble, faisons rayonner l'Espérance de Noël</h2>
+      <p>Témoignez votre solidarité avec les personnes précarisées en lutte pour une vie digne.</p>
+      <a class="btn btn--white don" href="https://jedonne.vivre-ensemble.be/fr-FR/p/avent-2026">Je fais un don</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <div class="wrap">
+      <div>
+        <p><strong>Action Vivre Ensemble</strong> est une association catholique de lutte contre l'exclusion sociale. Chaque année, elle soutient des projets menés en Wallonie et à Bruxelles par des associations de terrain, et sensibilise aux causes de la pauvreté.</p>
+        <img src="https://adfinitas.b-cdn.net/AVE/EOY26/img/logo-ave.png" alt="Action Vivre Ensemble" width="400" height="89" loading="lazy">
+      </div>
+      <div class="foot__share">Partagez votre engagement à nos côtés<br>
+        <a href="https://www.facebook.com/Vivre.Ensemble32/">Facebook</a><a href="https://www.instagram.com/actionvivreensemble/">Instagram</a><a href="https://www.youtube.com/user/vivreEnsembleBe">YouTube</a>
+      </div>
+    </div>
+  </div>
+  <div class="legal"><div class="wrap">Action Vivre Ensemble asbl · Rue du Gouvernement Provisoire 32, 1000 Bruxelles · BE 0468.058.256</div></div>
+</footer>
+
+<div class="sticky-cta"><a class="btn don" href="https://jedonne.vivre-ensemble.be/fr-FR/p/avent-2026">Je fais un don</a></div>
+
+<script>
+/* Transmet les UTM de la page vers le formulaire de don (fallback : utm LP). */
+(function(){
+  var q = location.search && location.search.indexOf('utm_') > -1 ? location.search.slice(1) : 'utm_medium=lp&utm_source=campagne&utm_campaign=eoy';
+  document.querySelectorAll('a.don').forEach(function(a){
+    a.href = a.href + (a.href.indexOf('?') > -1 ? '&' : '?') + q;
+    a.target = '_blank'; a.rel = 'noopener';
+  });
+})();
+</script>
+
+</body>
+</html>
