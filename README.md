@@ -11,6 +11,8 @@ Campagne de fin d'année 2026 : « Refusons la pauvreté, agissons ensemble ! »
 | `emails/AVE_EOY26_E2_FR.html` | E2 · L'Oasis (Bas-Warneton) · envoi 15/12, relance 17/12 |
 | `emails/AVE_EOY26_E3_FR.html` | E3 · Le 26 (Charleroi) · envoi 22/12, relance 26/12 |
 | `emails/AVE_EOY26_E4_FR.html` | E4 · Défisc · envoi 29/12, relance 31/12 |
+| `popup/index.html` | Aperçu de la popup home sur une maquette de la page d'accueil (toujours affichée) |
+| `popup/popup-snippet.html` | Snippet à coller avant `</body>` de la home : une fois par session, masquée 3 jours après fermeture |
 
 ## Liens
 

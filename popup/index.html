@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Popup Avent 2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&display=swap">
+<style>
+/* Layout: démo de la popup affichée sur une maquette simplifiée de la home vivre-ensemble.be. Single light theme (charte AVE). */
+:root{--green:#06AA80;--blue:#007AC9;--orange:#ED5E26;--lime:#8CC43F;--ink:#3F4442;--muted:#6B726F;--mint:#E7F4EF;--paper:#fff;color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Barlow",Arial,sans-serif}
+/* --- maquette home (démo seulement) --- */
+.mock-bar{background:var(--green);height:34px}
+.mock-head{display:flex;align-items:center;justify-content:space-between;padding:14px max(16px,env(safe-area-inset-right,0px)) 14px max(16px,env(safe-area-inset-left,0px));background:#f7f9f8}
+.mock-head img{width:150px;height:auto}
+.mock-head span{background:var(--orange);color:#fff;border-radius:999px;padding:8px 16px;font-weight:700;font-size:14px}
+.mock-body{padding:32px max(16px,env(safe-area-inset-right,0px)) 32px max(16px,env(safe-area-inset-left,0px));display:grid;gap:16px;max-width:1000px;margin:0 auto}
+.mock-body div{background:#eef2f0;border-radius:6px;height:120px}
+.mock-body div:first-child{height:260px}
+
+/* ===== POPUP (bloc à intégrer sur la home) ===== */
+.ave-pop{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));background:rgba(20,40,32,.55)}
+.ave-pop[hidden]{display:none!important}
+.ave-pop__card{position:relative;width:min(760px,100%);max-height:100%;overflow:auto;background:#fff;display:grid;grid-template-columns:1fr 1.1fr;box-shadow:0 30px 70px -20px rgba(0,0,0,.45);animation:avePopIn .35s ease-out}
+.ave-pop__media{position:relative;min-height:100%}
+.ave-pop__media img{width:100%;height:100%;object-fit:cover;object-position:45% 30%;display:block}
+.ave-pop__tag{position:absolute;left:0;top:18px;background:var(--lime);color:#fff;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:12px;padding:5px 10px}
+.ave-pop__body{padding:34px 30px 28px;display:flex;flex-direction:column;gap:14px}
+.ave-pop__title{margin:0;font-size:27px;line-height:1.2;font-weight:800;color:#fff}
+.ave-pop__title span{background:var(--green);padding:2px 8px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.ave-pop__text{margin:0;font-size:16px;line-height:1.55}
+.ave-pop__tax{margin:0;background:#FBE7DE;padding:10px 12px;font-size:14px;line-height:1.45}
+.ave-pop__tax b{color:var(--orange)}
+.ave-pop__cta{display:inline-flex;justify-content:center;align-items:center;background:var(--orange);color:#fff;text-decoration:none;font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:15px;padding:14px 22px;border-radius:999px}
+.ave-pop__cta:hover{background:#D24C17}
+.ave-pop__later{background:none;border:0;color:var(--muted);text-decoration:underline;font:inherit;font-size:14px;cursor:pointer;align-self:center}
+.ave-pop__close{position:absolute;top:8px;right:8px;width:38px;height:38px;border:0;border-radius:50%;background:#fff;color:var(--ink);font-size:24px;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.ave-pop__close:focus-visible,.ave-pop__cta:focus-visible,.ave-pop__later:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+@keyframes avePopIn{from{opacity:.4;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (max-width:620px){
+  .ave-pop__card{grid-template-columns:1fr}
+  .ave-pop__media{height:190px;min-height:0}
+  .ave-pop__body{padding:22px 20px 20px}
+  .ave-pop__title{font-size:23px}
+}
+@media (prefers-reduced-motion:reduce){.ave-pop__card{animation:none}}
+.demo-reopen{position:fixed;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));background:var(--blue);color:#fff;border:0;border-radius:999px;padding:10px 16px;font:600 14px "Barlow",Arial,sans-serif;cursor:pointer}
+</style>
+</head>
+<body>
+<!-- maquette de fond (démo) -->
+<div class="mock-bar"></div>
+<div class="mock-head"><img src="https://adfinitas.b-cdn.net/AVE/EOY26/img/logo-ave.png" alt="Action Vivre Ensemble" width="400" height="89"><span>Faire un don</span></div>
+<div class="mock-body"><div></div><div></div><div></div></div>
+<button class="demo-reopen" id="demo-reopen" type="button">Rouvrir la popup</button>
+
+<!-- ===== POPUP ===== -->
+<div class="ave-pop" id="ave-pop" role="dialog" aria-modal="true" aria-labelledby="ave-pop-title">
+  <div class="ave-pop__card">
+    <button class="ave-pop__close" id="ave-pop-close" type="button" aria-label="Fermer">×</button>
+    <div class="ave-pop__media">
+      <img src="https://adfinitas.b-cdn.net/AVE/EOY26/img/oasis-maman.jpg" alt="Une maman serre son fils dans ses bras à la maison d'accueil L'Oasis" width="1400" height="933">
+      <span class="ave-pop__tag">Avent 2026</span>
+    </div>
+    <div class="ave-pop__body">
+      <h2 class="ave-pop__title" id="ave-pop-title"><span>Refusons la pauvreté, agissons ensemble&nbsp;!</span></h2>
+      <p class="ave-pop__text">Cet Avent, votre don devient un repas chaud à Liège, un refuge pour des mamans et leurs enfants à Bas-Warneton et à Charleroi.</p>
+      <p class="ave-pop__tax"><b>Réduction d'impôt de 30 %</b> pour les dons d'un montant minimum de 40 euros par année. Un don de 100 € ne vous coûte que 70 €.</p>
+      <a class="ave-pop__cta" href="https://jedonne.vivre-ensemble.be/fr-FR/p/avent-2026?utm_medium=popup&utm_source=website&utm_campaign=eoy" target="_blank" rel="noopener">Je fais un don</a>
+      <button class="ave-pop__later" id="ave-pop-later" type="button">Plus tard</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* Popup : s'affiche une fois par session ; "Plus tard"/fermeture = masquée 3 jours. */
+(function(){
+  var pop=document.getElementById('ave-pop'), KEY='ave_pop_avent26';
+  function hide(days){pop.hidden=true;try{localStorage.setItem(KEY,String(Date.now()+days*864e5))}catch(e){}}
+  var until=0;try{until=+localStorage.getItem(KEY)||0}catch(e){}
+  var DEMO=true; /* mettre à false en production */
+  if(!DEMO && until>Date.now()) pop.hidden=true;
+  document.getElementById('ave-pop-close').onclick=function(){hide(3)};
+  document.getElementById('ave-pop-later').onclick=function(){hide(3)};
+  pop.addEventListener('click',function(e){if(e.target===pop)hide(3)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!pop.hidden)hide(3)});
+  var re=document.getElementById('demo-reopen'); if(re) re.onclick=function(){pop.hidden=false};
+})();
+</script>
+</body>
+</html>
